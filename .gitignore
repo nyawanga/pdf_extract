@@ -1,0 +1,8 @@
+*.txt
+!requirements.txt
+*.json
+./uploads/*.txt
+./uploads/*.json
+./__pycache__/*
+./download/*.txt
+./download/*.json
