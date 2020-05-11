@@ -37,7 +37,7 @@ def upload_file():
         if file and allowed_files(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['TEMP_FOLDER'], filename))
-            with app.open_resource(os.path.join(app.config['TEMP_FOLDER'], filename)) as f:
+            with app.open_resource(os.path.join(app.config['TEMP_FOLDER'], filename), "r") as f:
                 text = f.read()
             return_data = patents.process_data(text)
             with open('./download/processed_data.json', 'w') as outfile:
