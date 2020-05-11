@@ -1,4 +1,4 @@
-from patents_app.py import app
+from patents_app import app
 
 if __name__ == "__main__":
     app.run()
